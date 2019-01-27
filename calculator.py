@@ -1,3 +1,7 @@
+'''
+Program : Magical Calculator
+Author : Anshul Arya
+'''
 import re
 print("Magical Calculator")
 print("Type 'quit' to exit\mn")
@@ -8,11 +12,14 @@ def performMath():
     global run
     global previous
     equation = ""
+    
+    #if there has been a previous calculation, use that result as the prompt
     if previous == 0:
         equation = input("Enter Equation")
     else:
         equation = input(str(previous))
-
+     
+    # if user quit
     if equation =='quit':
         print("Good-Bye :)")
     else:
